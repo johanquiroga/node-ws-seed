@@ -13,4 +13,5 @@ module.exports = {
   OnlyAdminAllowedError: 'Only administrators are allowed to perform this operation',
   AdminNotAllowedError: 'Administrators are not allowed to perform this operation',
   ForbiddenActionError: 'You are not authorized to perform this operation',
+  UserNotFound: 'User :userId not found',
 };

@@ -7,6 +7,7 @@ exports.userFields = [
   'phoneNumber',
   'createdAt',
   'updatedAt',
+  'admin',
 ];
 
 exports.passwordPattern = '^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$';
