@@ -25,7 +25,7 @@ router.route('/')
     middlewares.authorization.verifyAdmin,
     async (req, res, next) => {
       try {
-        const users = await User.find({});
+        const users = await User.find({ email: { $ne: req.user.email } });
 
         return res.json({ success: true, users });
       } catch (err) {
