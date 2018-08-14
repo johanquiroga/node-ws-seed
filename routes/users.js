@@ -9,10 +9,12 @@ const router = express.Router();
 router.use(express.json());
 
 router.route('/')
+  /* Set up header Content-Type for response */
   .all((req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     next();
   })
+  /* Respond to CORS policy preflight */
   .options(cors.corsWithOptions, (req, res) => {
     res.sendStatus(200);
   })
@@ -33,10 +35,12 @@ router.route('/')
   );
 
 router.route('/:userId')
+  /* Set up header Content-Type for response */
   .all((req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     next();
   })
+  /* Respond to CORS policy preflight */
   .options(cors.corsWithOptions, (req, res) => {
     res.sendStatus(200);
   })

@@ -7,6 +7,9 @@ const User = require('../models/user');
 const authenticate = require('./authenticate');
 const authorization = require('./authorization');
 
+/*
+* Search requested user and load it to request object
+*/
 const loadUser = async (req, res, next) => {
   const { userId } = req.params;
   try {

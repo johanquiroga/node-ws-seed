@@ -11,15 +11,24 @@ const User = require('../models/user');
 const router = express.Router();
 router.use(express.json());
 
+/*
+* Set up header Content-Type for response
+*/
 router.all('*', (req, res, next) => {
   res.setHeader('Content-Type', 'application/json');
   next();
 });
 
+/*
+* Respond to CORS policy preflight
+*/
 router.options('*', cors.corsWithOptions, (req, res) => {
   res.sendStatus(200);
 });
 
+/*
+* Process register request. If successful, log user in and send back data
+*/
 router.post(
   '/register',
   cors.corsWithOptions,
@@ -56,6 +65,9 @@ router.post(
   },
 );
 
+/*
+* Process login (email/password) request.
+*/
 router.post(
   '/login',
   cors.corsWithOptions,
@@ -73,6 +85,9 @@ router.post(
   (err, req, res, next) => next(errors.unauthorized(errorMessages.LoginUserError)),
 );
 
+/*
+* Process logout request. If user not logged in respond with error.
+*/
 router.post(
   '/logout',
   cors.corsWithOptions,
