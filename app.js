@@ -3,8 +3,21 @@ const errors = require('boom');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 
 const config = require('./config');
+
+const connect = mongoose.connect(config.mongoUrl, { useNewUrlParser: true });
+
+connect.then(
+  () => {
+    console.log(`Connected correctly to server: ${config.mongoUrl}`);
+  },
+  (err) => {
+    console.error(err);
+    process.exit(1);
+  },
+);
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');

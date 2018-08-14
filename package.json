@@ -15,7 +15,13 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
-    "morgan": "~1.9.0"
+    "libphonenumber-js": "^1.4.2",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.8",
+    "mongoose-sanitizer-plugin": "^1.1.0",
+    "mongoose-validator": "^2.1.0",
+    "morgan": "~1.9.0",
+    "validator": "^10.5.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
