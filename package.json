@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=8080 node ./bin/www",
+    "start": "APP_NAME=NODE_WS_SEED node ./bin/www",
     "lint": "eslint ."
   },
   "dependencies": {

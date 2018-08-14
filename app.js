@@ -3,7 +3,6 @@ const errors = require('boom');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-require('dotenv').config();
 
 const config = require('./config');
 
