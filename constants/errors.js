@@ -1,0 +1,16 @@
+module.exports = {
+  MissingPasswordError: 'No password was given',
+  AttemptTooSoonError: 'Account is currently locked. Try again later',
+  TooManyAttemptsError: 'Account locked due to too many failed login attempts',
+  NoSaltValueStoredError: 'Authentication not possible. No salt value stored',
+  IncorrectPasswordError: 'Password or username is incorrect',
+  IncorrectUsernameError: 'Password or username is incorrect',
+  MissingUsernameError: 'No username was given',
+  UserExistsError: 'A user with the given email is already registered',
+  RegisterUserError: 'There was an error registering the user',
+  LoginUserError: 'Invalid email/password combination. Please try again.',
+  UserNotLoggedIn: 'Authentication error. You are not logged in',
+  OnlyAdminAllowedError: 'Only administrators are allowed to perform this operation',
+  AdminNotAllowedError: 'Administrators are not allowed to perform this operation',
+  ForbiddenActionError: 'You are not authorized to perform this operation',
+};

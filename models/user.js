@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 const validate = require('mongoose-validator');
 const validator = require('validator');
 const sanitizerPlugin = require('mongoose-sanitizer-plugin');
 const moment = require('moment');
 const { isValidNumber } = require('libphonenumber-js');
 const { namePattern, passwordPattern } = require('../constants');
+const errorMessages = require('../constants/errors');
 
 const { Schema } = mongoose;
 
@@ -115,12 +117,21 @@ const User = new Schema({
     type: String,
     select: false,
   },
+  admin: {
+    type: Boolean,
+    default: false,
+  },
 }, {
   timestamps: true,
 });
 
-User.plugin(sanitizerPlugin, {
-  mode: 'sanitize',
+User.plugin(passportLocalMongoose, {
+  usernameField: 'email',
+  usernameLowerCase: true,
+  errorMessages,
+  passwordValidator,
 });
+
+User.plugin(sanitizerPlugin, { mode: 'sanitize' });
 
 module.exports = mongoose.model('User', User);
