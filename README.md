@@ -61,6 +61,19 @@ The token is issued when an user is registered and when an existing user logs in
 * Add logger to use instead of `console.log`
 * Add automated tests
 
+## Contribute
+
+If you like to contribute, submit a new *PR*. I will get back to you as soon as possible.
+
+See pull request template [here](pull_request_template.md).
+
+## Report a Bug
+
+Let me know if you found a bug, have some new features to include, etc.
+
+See issue template [here](issue_template.md).
+
+
 ## License
 
 Licensed under the MIT License, Copyright © 2018 [Johan Quiroga](http://johanquiroga.me).
