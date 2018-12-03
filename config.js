@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const appName = process.env.APP_NAME;
+const appName = process.argv[2];
 
 let whitelist = process.env[`${appName}_WHITELIST`].split(',').filter(host => host !== '');
 if (whitelist.length === 0) {

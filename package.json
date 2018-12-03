@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "APP_NAME=NODE_WS_SEED node ./bin/www",
+    "start": "node ./bin/www NODE_WS_SEED",
     "lint": "eslint ."
   },
   "dependencies": {
