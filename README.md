@@ -59,6 +59,7 @@ The token is issued when an user is registered and when an existing user logs in
 ## TODO
 * Add missing authentication features (activate users, reset password)
 * Add logger to use instead of `console.log`
+* Add internationalization
 * Add automated tests
 
 ## Contribute
